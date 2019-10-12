@@ -1,0 +1,14 @@
+{
+  "name": "dubhacks-2019-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "root/index.js",
+  "scripts": {
+    "start": "node root"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
