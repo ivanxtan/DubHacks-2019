@@ -1,12 +1,27 @@
 import React, {useContext} from "react";
 
-import { HabitContext } from "../../contexts/HabitContext";
+import { HabitContext } from "../../../contexts/HabitContext";
 
-function Home() {
+function StreakCount() {
     let habitContext = useContext(HabitContext);
-    return (
-        <h1>Home</h1>
-    );
+    if(habitContext.habits.length == 0) {
+      return null;
+    }
+    else {
+      let maxnum = 0;
+      let maxhab = "";
+
+      for(let i = 0; i < habitContext.habits.length; i++) {
+        let hab1 = habitContext.habits[i];
+        if(hab1.currentStreak >= maxnum) {
+          maxnum = hab1.currentStreak;
+          maxhab = hab1.info.name;
+        }
+      }
+      return (
+          <p>Your longest current streak is {maxnum} days for {maxhab}</p>
+      );
+  }
 }
 
-export default Home;
+export default StreakCount;
