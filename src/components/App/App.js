@@ -10,13 +10,15 @@ import Delete from "../../views/Delete/Delete";
 import NavBar from "../presentational/NavBar/NavBar";
 import FullHeight from "../layout/FullHeight/FullHeight";
 
+import styles from "./App.module.css";
+
 function App() {
     return (
         <Router>
             <HabitProvider>
                 <NavBar />
                 <FullHeight>
-                    <main>
+                    <main className={styles.main}>
                         <Switch>
                             <Route exact path="/" component={Home} />
                             <Route exact path="/create" component={Create} />

@@ -18,6 +18,7 @@ function HabitForm(props) {
         props.onSubmit(name, description);
         setRedirect(true);
     }
+    
     if (redirect) {
         return (
             <Redirect to="/" />
@@ -25,17 +26,16 @@ function HabitForm(props) {
     } else {
         return (
             <Form onSubmit={onSubmit}>
-              <Form.Field inline>
+              <Form.Field>
                 <Input label={
                   <Label><Icon name="clipboard list" />I want to...</Label>
                 } required name="name" type="text" value={name} onChange={(e) => { setName(e.target.value) }} placeholder="learn to play piano"/>
-                {!name ? (<Label basic color="red" pointing="left">You must enter a habit!</Label>) : null}
               </Form.Field>
               <Form.Field>
-                <label>Description <Icon name="content" />{!description ? (<Label basic color="red">You must enter a description!</Label>) : null}</label>
+                <label>Description</label>
                 <TextArea className={styles.description} required name="description" type="text" value={description} onChange={(e) => { setDescription(e.target.value) }} placeholder="I want to learn a new skill: playing the piano!" />
               </Form.Field>
-              <Button type='submit' disabled={disableSubmit}>Submit</Button>
+              <Button color={!(name && description) ? "grey" : "green"} type='submit' disabled={!(name && description) || disableSubmit}>Submit</Button>
             </Form>
         );
     }

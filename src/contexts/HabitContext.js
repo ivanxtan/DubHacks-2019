@@ -20,19 +20,21 @@ function HabitProvider(props) {
      * @param {String} description the desired description
      */
     let addHabit = (name, description) => {
-        let habitInfo = {
-            name: name,
-            description: description
-        };
-
-        let habit = {
-            info: habitInfo,
-            longestStreak: 0,
-            currentStreak: 0,
-            lastCheckedIn: new Date().setHours(0, 0, 0, 0)
+        if (name && description) {
+            let habitInfo = {
+                name: name,
+                description: description
+            };
+    
+            let habit = {
+                info: habitInfo,
+                longestStreak: 0,
+                currentStreak: 0,
+                lastCheckedIn: new Date().setHours(0, 0, 0, 0)
+            }
+    
+            setHabits((oldHabits) => [...oldHabits, habit]);
         }
-
-        setHabits((oldHabits) => [...oldHabits, habit]);
     }
 
     /**
