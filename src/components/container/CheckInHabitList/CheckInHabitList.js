@@ -21,7 +21,7 @@ function CheckInHabitList() {
                 <List.Item key={index}>
                     <Card fluid>
                         <HabitItem values={item} />
-                        <Button disabled={todaysDate === lastCheckedInDate} onClick={() => {habitContext.checkInHabit(index)}}>
+                        <Button disabled={todaysDate === lastCheckedInDate} color={todaysDate !== lastCheckedInDate ? "green" : "grey"} onClick={() => {habitContext.checkInHabit(index)}}>
                             <Button.Content>Check In</Button.Content>
                         </Button>
                     </Card>
