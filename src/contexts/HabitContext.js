@@ -5,6 +5,12 @@ let HabitContext = createContext(null);
 function HabitProvider(props) {
     let [habits, setHabits] = useState([]);
 
+    /**
+     * Adds a habit.
+     * 
+     * @param {String} name the desired name
+     * @param {String} description the desired description
+     */
     let addHabit = (name, description) => {
         let habitInfo = {
             name: name,
@@ -21,6 +27,11 @@ function HabitProvider(props) {
         setHabits((oldHabits) => [...oldHabits, habit]);
     }
 
+    /**
+     * Deletes a desired habit.
+     * 
+     * @param {Number} index the desired index
+     */
     let deleteHabit = (index) => {
         setHabits((oldHabits) => {
             let first = oldHabits.slice(0, index);
@@ -31,6 +42,11 @@ function HabitProvider(props) {
         });
     }
 
+    /**
+     * Checks in a desired habit.
+     * 
+     * @param {Number} index the desired index
+     */
     let checkInHabit = (index) => {
         setHabits((oldHabits) => {
             let current = oldHabits[index];
