@@ -5,7 +5,12 @@ let HabitContext = createContext(null);
 function HabitProvider(props) {
     let [habits, setHabits] = useState([]);
 
-    let addHabit = (habitInfo) => {
+    let addHabit = (name, description) => {
+        let habitInfo = {
+            name: name,
+            description: description
+        };
+        
         let habit = {
             info: habitInfo,
             longestStreak: 0,
@@ -37,7 +42,7 @@ function HabitProvider(props) {
                 current.currentStreak++;
                 current.longestStreak = Math.max(current.currentStreak, current.longestStreak);
                 current.lastCheckedIn = new Date().setHours(0, 0, 0, 0);
-    
+
                 let first = oldHabits.slice(0, index);
                 let second = oldHabits.slice(index + 1, oldHabits.length);
                 let combined = [...first, current, ...second];
