@@ -1,6 +1,6 @@
 # Habituator
 
-Created by Ivan Tan, Generous Yeh, Jonathan Cho, Nathan Chung at DubHacks 2019.
+Created by Ivan Tan, Generous Yeh, Jonathan Cho, and Nathan Chung at DubHacks 2019.
 
 ![Preview of Habituator](preview.png "Preview of Habituator")
 
