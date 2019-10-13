@@ -9,6 +9,10 @@
     left: 0;
 }
 
-.container ul li {
-    display: inline;
+.container a {
+    font-size: 2em;
+}
+
+.container a:hover, .container a.active {
+    border-bottom: 2px solid black;
 }
