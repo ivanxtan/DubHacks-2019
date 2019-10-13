@@ -17,9 +17,20 @@ function HabitProvider(props) {
         setHabits((oldHabits) => [...oldHabits, habit]);
     }
 
+    let deleteHabit = (index) => {
+        setHabits((oldHabits) => {
+            let first = oldHabits.slice(0, index);
+            let second = oldHabits.slice(index + 1, oldHabits.length);
+            let combined = [...first, ...second];
+
+            return combined;
+        });
+    }
+
     let value = {
         habits: habits,
-        addHabit: addHabit
+        addHabit: addHabit,
+        deleteHabit: deleteHabit
     };
 
     return (
