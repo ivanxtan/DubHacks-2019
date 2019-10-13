@@ -19,7 +19,7 @@ function CompletedHabitList() {
             } else {
                 return null;
             }
-        });
+        }).reverse();
 
         return (
             <>

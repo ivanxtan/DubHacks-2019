@@ -20,7 +20,7 @@ function CheckInHabitList() {
             } else {
                 return null;
             }
-        });
+        }).reverse();
 
         return (
             <>
