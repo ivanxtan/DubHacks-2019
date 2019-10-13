@@ -4,7 +4,7 @@ import HabitItem from "../HabitItem/HabitItem";
 
 import { HabitContext } from "../../../contexts/HabitContext";
 
-function CheckInHabitList(props) {
+function DeleteHabitList(props) {
     let habitContext = useContext(HabitContext);
 
     let items = props.items;
@@ -15,7 +15,7 @@ function CheckInHabitList(props) {
                 return (
                     <li key={index}>
                         <HabitItem values={item} />
-                        <button onClick={() => {habitContext.checkInHabit(index)}}>Check In</button>
+                        <button onClick={() => {habitContext.deleteHabit(index)}}>Delete</button>
                     </li>
                 );
             }
@@ -36,4 +36,4 @@ function CheckInHabitList(props) {
     }
 }
 
-export default CheckInHabitList;
+export default DeleteHabitList;
