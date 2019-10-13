@@ -16,8 +16,6 @@ function App() {
     return (
         <Router>
             <HabitProvider>
-                <NavBar />
-                <FullHeight>
                     <main className={styles.main}>
                         <Switch>
                             <Route exact path="/" component={Home} />
@@ -25,7 +23,6 @@ function App() {
                             <Route exact path="/delete" component={Delete} />
                         </Switch>
                     </main>
-                </FullHeight>
             </HabitProvider>
         </Router>
     );
