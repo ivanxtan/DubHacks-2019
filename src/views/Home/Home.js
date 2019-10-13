@@ -22,18 +22,19 @@ function Home() {
                 <Container as="header" text>
                     <Header as='h1' textAlign="center">Habituator</Header>
                     <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-                    ligula eget dolor. Aenean massa strong. Cum sociis natoque penatibus et
-                    magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
-                    ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
-                    quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-                    arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-                    Nullam dictum felis eu pede link mollis pretium. Integer tincidunt. Cras
-                    dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
-                    Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                    Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
-                    viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
-                    Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
+                        Habituator is a web app created with the goal of 
+                        helping users follow through with their habits. By 
+                        keeping track of the users’ commitments to their 
+                        desired habits, we hope to motivate people to form the 
+                        habits they’ve always had trouble with. Users can track 
+                        as many habits as they’d like, and check in daily to 
+                        ensure they’re keeping up with their goals. On average, 
+                        it takes 66 days for a new practice to form into a habit. 
+                        Once a user has hit a 66 day streak of checking in, 
+                        they’ve successfully formed a habit and completed their 
+                        goal. The Habituator is a simple yet effective tool 
+                        that emphasizes the importance of consistency in 
+                        building skills and other habits.
                     </p>
                 </Container>
                 <Divider horizontal />
