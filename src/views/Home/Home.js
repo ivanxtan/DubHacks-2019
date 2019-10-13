@@ -1,25 +1,14 @@
-import React, {useContext} from "react";
+import React from "react";
 
-import { HabitContext } from "../../contexts/HabitContext";
+import CheckInHabitList from "../../components/container/CheckInHabitList/CheckInHabitList";
+import CompletedHabitList from "../../components/container/CompletedHabitList/CompletedHabitList";
 
 function Home() {
-    let habitContext = useContext(HabitContext);
-
-    /* Temporary habit rendering */
-    let habits = habitContext.habits;
-    let renderedHabits = habits.map((habit) => {
-        return (
-            <>
-                <h1>{habit.info.name}</h1>
-                <p>{habit.info.description}</p>
-            </>
-        );
-    });
-
     return (
         <>
-        <h1>Home</h1>
-        {renderedHabits}
+            <h1>Home</h1>
+            <CheckInHabitList />
+            <CompletedHabitList />
         </>
     );
 }

@@ -1,9 +1,12 @@
-import React from "react";
+import React, {useContext} from "react";
 
-import HabitItem from "../HabitItem/HabitItem";
+import HabitItem from "../../presentational/HabitItem/HabitItem";
 
-function CompletedHabitList(props) {
-    let items = props.items;
+import { HabitContext } from "../../../contexts/HabitContext";
+
+function CompletedHabitList() {
+    let habitContext = useContext(HabitContext);
+    let items = habitContext.habits;
 
     if (items.length > 0) {
         let itemsElements = items.map((item, index) => {
@@ -13,6 +16,8 @@ function CompletedHabitList(props) {
                         <HabitItem values={item} />
                     </li>
                 );
+            } else {
+                return null;
             }
         });
 
