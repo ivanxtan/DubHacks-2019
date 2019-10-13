@@ -2,7 +2,7 @@ import React, {useContext} from "react";
 
 import { HabitContext } from "../../../contexts/HabitContext";
 
-import { List, Card } from "semantic-ui-react";
+import { Header, List, Card } from "semantic-ui-react";
 
 function CompletedHabitList() {
     let habitContext = useContext(HabitContext);
@@ -36,7 +36,7 @@ function CompletedHabitList() {
     if (hasCompleted) {
         return (
             <>
-                <h1>Completed Habits</h1>
+                <Header as="h1">Completed Habits</Header>
                 <List>
                     {itemsElements}
                 </List>
@@ -44,7 +44,7 @@ function CompletedHabitList() {
         );
     } else {
         return (
-            <h1>There are no completed habits!</h1>
+            <Header as="h1">There are no completed habits!</Header>
         );
     }
 }

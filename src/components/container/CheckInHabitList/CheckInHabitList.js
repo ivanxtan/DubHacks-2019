@@ -4,7 +4,7 @@ import HabitItem from "../../presentational/HabitItem/HabitItem";
 
 import { HabitContext } from "../../../contexts/HabitContext";
 
-import { List, Card, Button } from "semantic-ui-react";
+import { Header, List, Card, Button } from "semantic-ui-react";
 
 function CheckInHabitList() {
     let habitContext = useContext(HabitContext);
@@ -33,7 +33,7 @@ function CheckInHabitList() {
 
         return (
             <>
-                <h1>In progress habits</h1>
+                <Header as="h1">In progress habits</Header>
                 <List>
                     {itemsElements}
                 </List>
@@ -41,7 +41,7 @@ function CheckInHabitList() {
         );
     } else {
         return (
-            <h1>There are no in progress habits!</h1>
+            <Header as="h1">There are no in progress habits!</Header>
         );
     }
 }

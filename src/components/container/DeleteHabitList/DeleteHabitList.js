@@ -4,7 +4,7 @@ import HabitItem from "../../presentational/HabitItem/HabitItem";
 
 import { HabitContext } from "../../../contexts/HabitContext";
 
-import { List, Button, Icon, Card } from "semantic-ui-react";
+import { Header, List, Button, Icon, Card } from "semantic-ui-react";
 
 function DeleteHabitList(props) {
     let habitContext = useContext(HabitContext);
@@ -40,7 +40,7 @@ function DeleteHabitList(props) {
         );
     } else {
         return (
-            <h1>There are no in progress habits!</h1>
+            <Header as="h1">There are no in progress habits!</Header>
         );
     }
 }

@@ -2,7 +2,7 @@ import React, {useContext} from "react";
 
 import { HabitContext } from "../../../contexts/HabitContext";
 
-import { Icon } from 'semantic-ui-react'
+import { Header, Icon } from 'semantic-ui-react'
 
 function StreakCount() {
     let habitContext = useContext(HabitContext);
@@ -22,7 +22,7 @@ function StreakCount() {
       }
       return (
         <>
-          <h2><Icon name='fire' />Your longest current streak is {maxnum} day{maxnum !== 1 ? "s" : null} to {maxhab}</h2>
+          <Header as="h1"><Icon name='fire' />Your longest current streak is {maxnum} day{maxnum !== 1 ? "s" : null} to {maxhab}</Header>
         </>
       );
   }
