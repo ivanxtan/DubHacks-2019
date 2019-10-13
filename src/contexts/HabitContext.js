@@ -10,13 +10,12 @@ function HabitProvider(props) {
             name: name,
             description: description
         };
-        
+
         let habit = {
             info: habitInfo,
             longestStreak: 0,
             currentStreak: 0,
-            lastCheckedIn: new Date().setHours(0, 0, 0, 0),
-            isComplete: false
+            lastCheckedIn: new Date().setHours(0, 0, 0, 0)
         }
 
         setHabits((oldHabits) => [...oldHabits, habit]);
