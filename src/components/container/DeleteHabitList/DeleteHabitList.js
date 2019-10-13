@@ -1,12 +1,11 @@
 import React, {useContext} from "react";
 
-import HabitItem from "../HabitItem/HabitItem";
+import HabitItem from "../../presentational/HabitItem/HabitItem";
 
 import { HabitContext } from "../../../contexts/HabitContext";
 
 function DeleteHabitList(props) {
     let habitContext = useContext(HabitContext);
-
     let items = props.items;
 
     if (items.length > 0) {
@@ -18,6 +17,8 @@ function DeleteHabitList(props) {
                         <button onClick={() => {habitContext.deleteHabit(index)}}>Delete</button>
                     </li>
                 );
+            } else {
+                return null;
             }
         });
 
