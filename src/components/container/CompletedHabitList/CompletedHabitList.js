@@ -36,8 +36,8 @@ function CompletedHabitList() {
     if (hasCompleted) {
         return (
             <>
-                <Header as="h1">Completed Habits</Header>
-                <List>
+                <Header as="h1" color="green">Completed Habits</Header>
+                <List relaxed="very">
                     {itemsElements}
                 </List>
             </>

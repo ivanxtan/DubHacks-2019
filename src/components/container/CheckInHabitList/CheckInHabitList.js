@@ -33,8 +33,8 @@ function CheckInHabitList() {
 
         return (
             <>
-                <Header as="h1">In Progress Habits</Header>
-                <List>
+                <Header as="h1" color="orange">In Progress Habits</Header>
+                <List relaxed="very">
                     {itemsElements}
                 </List>
             </>
