@@ -4,6 +4,8 @@ import HabitItem from "../../presentational/HabitItem/HabitItem";
 
 import { HabitContext } from "../../../contexts/HabitContext";
 
+import { List, Button, Icon, Card } from "semantic-ui-react";
+
 function DeleteHabitList(props) {
     let habitContext = useContext(HabitContext);
     let items = props.items;
@@ -12,10 +14,17 @@ function DeleteHabitList(props) {
         let itemsElements = items.map((item, index) => {
             if (item.longestStreak < 66) {
                 return (
-                    <li key={index}>
-                        <HabitItem values={item} />
-                        <button onClick={() => {habitContext.deleteHabit(index)}}>Delete</button>
-                    </li>
+                    <List.Item key={index}>
+                        <Card fluid>
+                            <HabitItem values={item} />
+                            <Button animated onClick={() => {habitContext.deleteHabit(index)}}>
+                                <Button.Content visible>Delete</Button.Content>
+                                <Button.Content hidden>
+                                    <Icon name="delete" />
+                                </Button.Content>
+                            </Button>
+                        </Card>
+                    </List.Item>
                 );
             } else {
                 return null;
@@ -24,10 +33,9 @@ function DeleteHabitList(props) {
 
         return (
             <>
-                <h1>In progress habits</h1>
-                <ul>
+                <List>
                     {itemsElements}
-                </ul>
+                </List>
             </>
         );
     } else {
