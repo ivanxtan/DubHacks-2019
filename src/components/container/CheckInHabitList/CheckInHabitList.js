@@ -1,13 +1,12 @@
 import React, {useContext} from "react";
 
-import HabitItem from "../HabitItem/HabitItem";
+import HabitItem from "../../presentational/HabitItem/HabitItem";
 
 import { HabitContext } from "../../../contexts/HabitContext";
 
-function CheckInHabitList(props) {
+function CheckInHabitList() {
     let habitContext = useContext(HabitContext);
-
-    let items = props.items;
+    let items = habitContext.habits;
 
     if (items.length > 0) {
         let itemsElements = items.map((item, index) => {
@@ -18,6 +17,8 @@ function CheckInHabitList(props) {
                         <button onClick={() => {habitContext.checkInHabit(index)}}>Check In</button>
                     </li>
                 );
+            } else {
+                return null;
             }
         });
 
