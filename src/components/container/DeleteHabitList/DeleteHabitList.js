@@ -33,7 +33,7 @@ function DeleteHabitList(props) {
 
         return (
             <>
-                <List>
+                <List relaxed="very">
                     {itemsElements}
                 </List>
             </>
