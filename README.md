@@ -1,68 +1,32 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Habituator
 
-## Available Scripts
+Created by Ivan Tan, Generous Yeh, Jonathan Cho, Nathan Chung at DubHacks 2019.
 
-In the project directory, you can run:
+![Preview of Habituator](preview.png "Preview of Habituator")
 
-### `npm start`
+Habituator is a web app created with the goal of 
+helping users follow through with their habits. By 
+keeping track of the users’ commitments to their 
+desired habits, we hope to motivate people to form the 
+habits they’ve always had trouble with. Users can track 
+as many habits as they’d like, and check in daily to 
+ensure they’re keeping up with their goals. On average, 
+it takes 66 days for a new practice to form into a habit. 
+Once a user has hit a 66 day streak of checking in, 
+they’ve successfully formed a habit and completed their 
+goal. The Habituator is a simple yet effective tool 
+that emphasizes the importance of consistency in 
+building skills and other habits.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Getting Started
+```bash
+# clone repo
+git clone https://github.com/ivanxtan/DubHacks-2019.git
+cd DubHacks-2019
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+# install dependencies
+npm install
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+# start the local server for development
+npm run start
+```
