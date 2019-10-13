@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Card, List } from 'semantic-ui-react'
+import { Card, List, Progress } from 'semantic-ui-react'
 
 function HabitItem(props) {
     let values = props.values;
@@ -23,6 +23,7 @@ function HabitItem(props) {
                         {(new Date(values.lastCheckedIn)).toLocaleDateString()}
                     </List.Item>
                 </List>
+                <Progress percent={Math.max(((values.currentStreak / 66) * 100), 0)} indicating style={{margin: "10px 0px 0px"}}/>
             </Card.Content>
         </>
     );
