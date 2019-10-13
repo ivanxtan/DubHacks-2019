@@ -7,9 +7,9 @@ function HabitItem(props) {
             <h2>Habit: {values.info.name}</h2>
             <p>{values.info.description}</p>
             <ul>
-                <li>Longest Streak: {values.longestStreak} days</li>
-                <li>Current Streak: {values.currentStreak} days</li>
-                <li>Last Check In: {new Date(values.lastCheckedIn)}</li>
+                <li>Longest Streak: {values.longestStreak} day{values.longestStreak !== 1 ? "s" : null}</li>
+                <li>Current Streak: {values.currentStreak} day{values.currentStreak !== 1 ? "s" : null}</li>
+                <li>Last Check In: {(new Date(values.lastCheckedIn)).toLocaleDateString()}</li>
             </ul>
         </>
     );
