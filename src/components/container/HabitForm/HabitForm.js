@@ -5,8 +5,8 @@ function HabitForm(props) {
     let [name, setName] = useState("");
     let [description, setDescription] = useState("");
 
-    let [disableSubmit, setDisableSubmit] = useState(false); 
-    let [redirect, setRedirect] = useState(false); 
+    let [disableSubmit, setDisableSubmit] = useState(false);
+    let [redirect, setRedirect] = useState(false);
 
     let onSubmit = (e) => {
         e.preventDefault();
