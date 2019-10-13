@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Card, Icon, List } from 'semantic-ui-react'
+import { Card, List } from 'semantic-ui-react'
 
 function HabitItem(props) {
     let values = props.values;
