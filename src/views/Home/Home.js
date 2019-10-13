@@ -43,7 +43,7 @@ function Home() {
                         Create a New Habit
                     </Button>
                     <Button color="red" onClick={() => {setDestination("/delete")}}>
-                        Delete an Existing Habit
+                        Stop Tracking a Goal
                     </Button>
                 </Container>
     

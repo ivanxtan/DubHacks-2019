@@ -22,7 +22,7 @@ function StreakCount() {
       if (maxnum !== 0) {
         return (
           <>
-            <Header as="h1" textAlign="center"><Icon name='fire' />Your longest current streak is {maxnum} day{maxnum !== 1 ? "s" : null} to {maxhab}!</Header>
+            <Header as="h1" textAlign="center"><Icon name='fire' />Your longest current streak is {maxnum} day{maxnum !== 1 ? "s" : null} with the goal to {maxhab}!</Header>
           </>
         );
       } else {
