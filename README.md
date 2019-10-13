@@ -2,6 +2,8 @@
 
 Created by Ivan Tan, Generous Yeh, Jonathan Cho, and Nathan Chung at DubHacks 2019.
 
+[Demo](https://habituator.online)
+
 ![Preview of Habituator](preview.png "Preview of Habituator")
 
 Habituator is a web app created with the goal of 
