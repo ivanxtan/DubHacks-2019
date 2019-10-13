@@ -1,16 +1,18 @@
 import React from "react";
 
-import HabitItem from "../HabitItem/HabitItem";
-
-function HabitList(props) {
-  let title = props.title;
-  let items = props.items;
-  return (
+function HabitItem(props) {
+    let values = props.values;
+    return (
         <>
-          <h1>{title}</h1>
-          <HabitItem values={items[0]} />
+            <h2>Habit: {values.info.name}</h2>
+            <p>{values.info.description}</p>
+            <ul>
+                <li>Longest Streak: {values.longestStreak} days</li>
+                <li>Current Streak: {values.currentStreak} days</li>
+                <li>Last Check In: {values.lastCheckedIn}</li>
+            </ul>
         </>
     );
 }
 
-export default HabitList;
+export default HabitItem;
