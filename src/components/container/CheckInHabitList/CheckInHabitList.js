@@ -4,6 +4,8 @@ import HabitItem from "../../presentational/HabitItem/HabitItem";
 
 import { HabitContext } from "../../../contexts/HabitContext";
 
+import { Header, List, Card, Button } from "semantic-ui-react";
+
 function CheckInHabitList() {
     let habitContext = useContext(HabitContext);
     let items = habitContext.habits;
@@ -15,10 +17,14 @@ function CheckInHabitList() {
                 let todaysDate = new Date().setHours(0, 0, 0, 0);
                 let lastCheckedInDate = new Date(item.lastCheckedIn).setHours(0, 0, 0, 0);
                 return (
-                    <li key={index}>
-                        <HabitItem values={item} />
-                        <button disabled={todaysDate === lastCheckedInDate} onClick={() => {habitContext.checkInHabit(index)}}>Check In</button>
-                    </li>
+                    <List.Item key={index}>
+                        <Card fluid>
+                            <HabitItem values={item} />
+                            <Button disabled={todaysDate === lastCheckedInDate} onClick={() => {habitContext.checkInHabit(index)}}>
+                                <Button.Content>Check In</Button.Content>
+                            </Button>
+                        </Card>
+                    </List.Item>
                 );
             } else {
                 return null;
@@ -27,15 +33,15 @@ function CheckInHabitList() {
 
         return (
             <>
-                <h1>In progress habits</h1>
-                <ul>
+                <Header as="h1">In Progress Habits</Header>
+                <List>
                     {itemsElements}
-                </ul>
+                </List>
             </>
         );
     } else {
         return (
-            <h1>There are no in progress habits!</h1>
+            <Header as="h1">There are no in progress habits!</Header>
         );
     }
 }
