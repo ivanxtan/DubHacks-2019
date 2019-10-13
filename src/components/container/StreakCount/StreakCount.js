@@ -14,7 +14,7 @@ function StreakCount() {
 
       for (let i = 0; i < habitContext.habits.length; i++) {
         let hab1 = habitContext.habits[i];
-        if (hab1.currentStreak >= maxnum) {
+        if (hab1.currentStreak >= maxnum && hab1.longestStreak < 66) {
           maxnum = hab1.currentStreak;
           maxhab = hab1.info.name;
         }
