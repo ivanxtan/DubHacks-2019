@@ -20,7 +20,7 @@ function DeleteHabitList(props) {
             } else {
                 return null;
             }
-        });
+        }).reverse();
 
         return (
             <>
