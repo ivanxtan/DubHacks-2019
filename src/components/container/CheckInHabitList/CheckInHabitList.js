@@ -33,7 +33,7 @@ function CheckInHabitList() {
 
         return (
             <>
-                <Header as="h1">In progress habits</Header>
+                <Header as="h1">In Progress Habits</Header>
                 <List>
                     {itemsElements}
                 </List>
