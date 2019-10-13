@@ -22,7 +22,6 @@ function HabitItem(props) {
                         <List.Header>Last Check In</List.Header>
                         {(new Date(values.lastCheckedIn)).toLocaleDateString()}
                     </List.Item>
-
                 </List>
             </Card.Content>
         </>

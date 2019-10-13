@@ -26,8 +26,9 @@ function HabitForm(props) {
         return (
             <Form onSubmit={onSubmit}>
               <Form.Field inline>
-                <label><Icon name="clipboard list" />I want to...</label>
-                <Input required name="name" type="text" value={name} onChange={(e) => { setName(e.target.value) }} placeholder="learn to play piano"/>
+                <Input label={
+                  <Label><Icon name="clipboard list" />I want to...</Label>
+                } required name="name" type="text" value={name} onChange={(e) => { setName(e.target.value) }} placeholder="learn to play piano"/>
                 {!name ? (<Label basic color="red" pointing="left">You must enter a habit!</Label>) : null}
               </Form.Field>
               <Form.Field>
