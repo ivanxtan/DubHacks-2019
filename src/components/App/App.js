@@ -7,9 +7,6 @@ import Home from "../../views/Home/Home";
 import Create from "../../views/Create/Create";
 import Delete from "../../views/Delete/Delete";
 
-import NavBar from "../presentational/NavBar/NavBar";
-import FullHeight from "../layout/FullHeight/FullHeight";
-
 import styles from "./App.module.css";
 
 function App() {
