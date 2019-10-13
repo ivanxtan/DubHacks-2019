@@ -19,11 +19,15 @@ function StreakCount() {
           maxhab = hab1.info.name;
         }
       }
-      return (
-        <>
-          <Header as="h1" textAlign="center"><Icon name='fire' />Your longest current streak is {maxnum} day{maxnum !== 1 ? "s" : null} to {maxhab}!</Header>
-        </>
-      );
+      if (maxnum !== 0) {
+        return (
+          <>
+            <Header as="h1" textAlign="center"><Icon name='fire' />Your longest current streak is {maxnum} day{maxnum !== 1 ? "s" : null} to {maxhab}!</Header>
+          </>
+        );
+      } else {
+        return null;
+      }
   }
 }
 
