@@ -11,10 +11,13 @@ function CheckInHabitList() {
     if (items.length > 0) {
         let itemsElements = items.map((item, index) => {
             if (item.longestStreak < 66) {
+                // set time to 0 so that the only comparison is date
+                let todaysDate = new Date().setHours(0, 0, 0, 0);
+                let lastCheckedInDate = new Date(item.lastCheckedIn).setHours(0, 0, 0, 0);
                 return (
                     <li key={index}>
                         <HabitItem values={item} />
-                        <button onClick={() => {habitContext.checkInHabit(index)}}>Check In</button>
+                        <button disabled={todaysDate === lastCheckedInDate} onClick={() => {habitContext.checkInHabit(index)}}>Check In</button>
                     </li>
                 );
             } else {
