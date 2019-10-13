@@ -19,7 +19,7 @@ function Home() {
     } else {
         return (
             <>
-                <Container text>
+                <Container as="header" text>
                     <Header as='h1' textAlign="center">Habituator</Header>
                     <p>
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
@@ -37,7 +37,7 @@ function Home() {
                     </p>
                 </Container>
                 <Divider horizontal />
-                <Container textAlign="center">
+                <Container as="nav" textAlign="center">
                     <Button color="green" onClick={() => {setDestination("/create")}}>
                         Create a New Habit
                     </Button>
