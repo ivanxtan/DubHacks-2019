@@ -40,7 +40,7 @@ function DeleteHabitList(props) {
         );
     } else {
         return (
-            <Header as="h1">There are no in progress habits!</Header>
+            <Header as="h1" textAlign="center">There are no in-progress habits!</Header>
         );
     }
 }

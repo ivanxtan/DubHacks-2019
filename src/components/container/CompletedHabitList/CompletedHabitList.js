@@ -44,7 +44,7 @@ function CompletedHabitList() {
         );
     } else {
         return (
-            <Header as="h1">There are no completed habits!</Header>
+            <Header as="h1" textAlign="center">There are no completed habits!</Header>
         );
     }
 }
