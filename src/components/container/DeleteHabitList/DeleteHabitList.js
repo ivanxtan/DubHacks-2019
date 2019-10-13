@@ -10,27 +10,28 @@ function DeleteHabitList(props) {
     let habitContext = useContext(HabitContext);
     let items = props.items;
 
-    if (items.length > 0) {
-        let itemsElements = items.map((item, index) => {
-            if (item.longestStreak < 66) {
-                return (
-                    <List.Item key={index}>
-                        <Card fluid>
-                            <HabitItem values={item} />
-                            <Button animated onClick={() => {habitContext.deleteHabit(index)}}>
-                                <Button.Content visible>Delete</Button.Content>
-                                <Button.Content hidden>
-                                    <Icon name="delete" />
-                                </Button.Content>
-                            </Button>
-                        </Card>
-                    </List.Item>
-                );
-            } else {
-                return null;
-            }
-        }).reverse();
-
+    let hasInProgress = false;
+    let itemsElements = items.map((item, index) => {
+        if (item.longestStreak < 66) {
+            hasInProgress = true;
+            return (
+                <List.Item key={index}>
+                    <Card fluid>
+                        <HabitItem values={item} />
+                        <Button animated onClick={() => {habitContext.deleteHabit(index)}}>
+                            <Button.Content visible>Delete</Button.Content>
+                            <Button.Content hidden>
+                                <Icon name="delete" />
+                            </Button.Content>
+                        </Button>
+                    </Card>
+                </List.Item>
+            );
+        } else {
+            return null;
+        }
+    }).reverse();
+    if (hasInProgress) {
         return (
             <>
                 <List relaxed="very">
