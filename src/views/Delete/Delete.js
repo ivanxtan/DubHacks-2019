@@ -2,9 +2,7 @@ import React, {useContext} from "react";
 
 import { HabitContext } from "../../contexts/HabitContext";
 
-import HabitForm from "../../components/container/HabitForm/HabitForm";
-
-import DeleteHabitList from "../../components/presentational/DeleteHabitList/DeleteHabitList";
+import DeleteHabitList from "../../components/container/DeleteHabitList/DeleteHabitList";
 
 function Delete() {
     let habitContext = useContext(HabitContext);
