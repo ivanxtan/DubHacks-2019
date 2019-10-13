@@ -9,7 +9,7 @@ function HabitItem(props) {
             <ul>
                 <li>Longest Streak: {values.longestStreak} days</li>
                 <li>Current Streak: {values.currentStreak} days</li>
-                <li>Last Check In: {values.lastCheckedIn}</li>
+                <li>Last Check In: {new Date(values.lastCheckedIn)}</li>
             </ul>
         </>
     );
