@@ -1,9 +1,17 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 
 let HabitContext = createContext(null);
 
 function HabitProvider(props) {
-    let [habits, setHabits] = useState([]);
+    /* Load habits from localStorage */
+    let initialHabits = JSON.parse((localStorage.getItem("habits") || "[]"));
+    let [habits, setHabits] = useState(initialHabits);
+
+    /* Update localStorage every habits change */
+    useEffect(() => {
+        localStorage.setItem("habits", JSON.stringify(habits));
+    }, [habits]);
+
 
     /**
      * Adds a habit.
