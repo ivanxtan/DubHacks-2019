@@ -7,6 +7,23 @@ function HabitProvider(props) {
     let initialHabits = JSON.parse((localStorage.getItem("habits") || "[]"));
     let [habits, setHabits] = useState(initialHabits);
 
+    /* Resets streaks if missed on page reload */
+    useEffect(() => {
+        setHabits((oldHabits) => {
+            let todaysDate = new Date().setHours(0, 0, 0, 0);
+            let newHabits = oldHabits.map((item) => {
+                let lastCheckedInDate = new Date(item.lastCheckedIn).setHours(0, 0, 0, 0);
+                let daysPast = (todaysDate - lastCheckedInDate) / (24 * 60 * 60 * 1000);
+                if (daysPast > 1) {
+                    item.currentStreak = 0;
+                }
+                return item;
+            })
+
+            return newHabits;
+        });
+    }, []);
+
     /* Update localStorage every habits change */
     useEffect(() => {
         localStorage.setItem("habits", JSON.stringify(habits));
@@ -25,14 +42,14 @@ function HabitProvider(props) {
                 name: name,
                 description: description
             };
-    
+
             let habit = {
                 info: habitInfo,
                 longestStreak: 0,
                 currentStreak: 0,
                 lastCheckedIn: new Date().setHours(0, 0, 0, 0)
             }
-    
+
             setHabits((oldHabits) => [...oldHabits, habit]);
         }
     }
